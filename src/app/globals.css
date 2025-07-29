@@ -28,8 +28,6 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    height: 100%;
-    min-height: 100vh;
   }
   
   body {
@@ -41,14 +39,11 @@
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    height: 100%;
   }
   
   /* 确保 main 元素填充剩余空间 */
   main {
     flex: 1;
-    min-height: 0;
   }
   
   /* 优化渲染性能 */
@@ -140,7 +135,18 @@
   box-sizing: border-box;
 }
 
-/* 确保 footer 始终在底部 */
+/* 修复 Vercel 部署时的底部空白问题 */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 确保页面内容正确布局 - layout.tsx中的body已设置为flex */
+main {
+  flex: 1 0 auto;
+}
+
 footer {
-  margin-top: auto;
+  flex-shrink: 0;
 }
