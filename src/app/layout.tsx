@@ -125,9 +125,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen flex flex-col">
+      <body>
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
