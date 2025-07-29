@@ -179,12 +179,12 @@ export default function Footer() {
         </div>
         
         {/* 底部版权信息 */}
-        <div className="border-t border-white/10 pt-6 sm:pt-8">
+        <div className="border-t border-white/10 pt-6 sm:pt-8 pb-0">
           <div className="text-center px-4">
             <p className="text-gray-400 text-xs sm:text-sm">
               &copy; 2025 <span className="text-bitcoin-orange font-medium">www.bitebi.info</span> 版权所有 | 专业比特币信息服务平台
             </p>
-            <p className="text-gray-500 text-xs mt-1">
+            <p className="text-gray-500 text-xs mt-1 mb-0">
               本站提供的信息仅供参考，不构成投资建议 | 投资有风险，入市需谨慎
             </p>
           </div>

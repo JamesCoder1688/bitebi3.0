@@ -136,17 +136,23 @@
 }
 
 /* 修复 Vercel 部署时的底部空白问题 */
-html, body {
+html {
   height: 100%;
+}
+
+body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
-/* 确保页面内容正确布局 - layout.tsx中的body已设置为flex */
+/* 确保页面内容正确布局 */
 main {
-  flex: 1 0 auto;
+  flex: 1;
 }
 
+/* 确保footer紧贴页面底部，无多余空白 */
 footer {
-  flex-shrink: 0;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }

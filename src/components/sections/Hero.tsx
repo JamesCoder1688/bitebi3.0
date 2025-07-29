@@ -36,28 +36,6 @@ export default function Hero() {
             <p className="opacity-80 text-sm sm:text-base">市场分析团队</p>
           </div>
         </div>
-        
-        {/* 快速导航链接 */}
-        <div className="mt-12 fade-in">
-          <div className="text-sm opacity-80 mb-4">快速导航</div>
-          <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <Link href="/what-is-bitcoin" className="text-bitcoin-light hover:text-white transition-colors">
-              比特币是什么
-            </Link>
-            <span className="opacity-50">•</span>
-            <Link href="/blog" className="text-bitcoin-light hover:text-white transition-colors">
-              最新资讯
-            </Link>
-            <span className="opacity-50">•</span>
-            <Link href="/bitcoin-price" className="text-bitcoin-light hover:text-white transition-colors">
-              价格分析
-            </Link>
-            <span className="opacity-50">•</span>
-            <Link href="/buy-bitcoin" className="text-bitcoin-light hover:text-white transition-colors">
-              购买指南
-            </Link>
-          </div>
-        </div>
       </div>
     </section>
   )
