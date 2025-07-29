@@ -125,7 +125,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen flex flex-col" style={{margin: 0, padding: 0, height: '100%'}}>
+      <body className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

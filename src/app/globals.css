@@ -135,24 +135,18 @@
   box-sizing: border-box;
 }
 
-/* 彻底修复 Vercel 部署时的底部空白问题 */
-* {
+/* 修复 Vercel 部署时的底部空白问题 */
+html {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
 }
 
-html {
-  height: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
 body {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
-  height: 100%;
-  overflow-x: hidden;
+  position: relative;
 }
 
 /* 确保页面内容正确布局 */
@@ -160,25 +154,13 @@ main {
   flex: 1;
 }
 
-/* 彻底消除footer下方空白 */
+/* 针对性修复 footer 下方空白 */
 footer {
-  margin: 0 !important;
-  padding-bottom: 0 !important;
+  margin-bottom: 0;
   position: relative;
 }
 
-/* 消除可能的额外空间 */
-footer::after {
-  content: '';
-  display: block;
-  height: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/* 确保页面容器无多余空间 */
-#__next {
-  margin: 0 !important;
-  padding: 0 !important;
+/* 确保页面占满整个视口 */
+body > div {
   min-height: 100vh;
 }

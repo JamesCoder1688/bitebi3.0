@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-12 sm:py-16 overflow-hidden" style={{marginBottom: 0, paddingBottom: 0}}>
+    <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-12 sm:py-16 overflow-hidden">
       {/* 背景纹理和装饰 */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23f7931a%22%20fill-opacity%3D%220.4%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%221.5%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
@@ -179,19 +179,17 @@ export default function Footer() {
         </div>
         
         {/* 底部版权信息 */}
-        <div className="border-t border-white/10 pt-6 sm:pt-8 pb-0">
+        <div className="border-t border-white/10 pt-6 sm:pt-8">
           <div className="text-center px-4">
             <p className="text-gray-400 text-xs sm:text-sm">
               &copy; 2025 <span className="text-bitcoin-orange font-medium">www.bitebi.info</span> 版权所有 | 专业比特币信息服务平台
             </p>
-            <p className="text-gray-500 text-xs mt-1 mb-0">
+            <p className="text-gray-500 text-xs mt-1">
               本站提供的信息仅供参考，不构成投资建议 | 投资有风险，入市需谨慎
             </p>
           </div>
         </div>
       </div>
-      {/* 消除任何可能的底部空白 */}
-      <div style={{height: 0, margin: 0, padding: 0, marginBottom: '-1px'}}></div>
     </footer>
   )
 }
